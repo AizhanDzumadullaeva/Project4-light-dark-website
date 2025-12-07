@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f0f0f0;
+    color: #000;
+    transition: background 0.5s, color 0.5s;
+}
+
+/* Жарық/түн режим */
+body.dark {
+    background: #222;
+    color: #fff;
+}
+
+/* Хедер */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #fff;
+    transition: background 0.5s;
+}
+body.dark header {
+    background: #333;
+}
+
+#toggle-theme {
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    transition: transform 0.2s;
+}
+#toggle-theme:active {
+    transform: scale(1.2);
+}
+
+/* Негізгі контент */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Карточкалар */
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s, background 0.5s;
+    cursor: pointer;
+}
+body.dark .card {
+    background: #333;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.card.clicked {
+    background: #ffeb3b; /* Click жасағанда түс өзгереді */
+    color: #000;
+}
